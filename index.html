@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="style.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    </head>
+    <body>      
+        <div class="nav">
+            <div class="logo">
+           <p class="iconText">Grocery_Bud_<p>
+            <span class="material-symbols-outlined " style="color:red;">
+            shopping_bag
+             </span>
+            </div>  
+            <div class="dateAndTime">
+                <p class="date" id="showDate">- - -</p>
+            </div>
+        </div>
+
+        <section class="ItemList grid-container">
+                <div class="grid-item item1">
+                    <div class="inputBox">
+                        <input type="text" placeholder="Name" id="NameInput" class="inputbox1" >
+                        <span class="break">|</span>
+                        <input type="text" placeholder="Description" id="typeInput" class="inputbox1" >
+                        <span class="break">|</span>
+                        <input type="text" placeholder="Price" id="MoneyInput" class="inputbox1" >
+                        <span class="break">|</span>
+                        <label>Paid </label>
+                        <input type="checkbox" id="paid" value="true">
+                        <span class="break">|</span>
+                        <button id="submitBtn" onclick="addItem()">+</button>
+                    </div>
+                    <div class="Overflow">
+                    <table class="titleTable" id="MainItemTable">
+                                <tr class="headingItem">
+                                    <th>ID</th>
+                                    <th>Item</th>
+                                    <th>Price</th>
+                                    <th>Paid</th>
+                                </tr>
+                            
+                            
+                           </table>
+                    </div>
+                </div>
+                <div class="grid-item item2">
+                        <div class="itemDetail">
+                            <div class="NameItem">
+                                <div class="itemFlex">
+                                    <h3>Item detail</h3>
+                                    <button class="removeBtn"  id="deletebtn" onclick="DeleteItem()">
+                                        <span class="material-symbols-outlined " >
+                                            delete
+                                        </span>
+                                    </button>
+                                </div>
+                                <h2 id="DetailName">Name goes here</h2>
+                            </div>
+                            <div class="detailGrid">
+                                <p>Desc : <span id="DetailType" class="Detail-Item"></span></p>   
+                                <p>Price : <span id="DetailPrice" class="Detail-Item"></span></p>   
+                                <p>Date : <span id="DetailDate" class="Detail-Item"></span></p>   
+                                <p>Time : <span id="DetailTime" class="Detail-Item"></span></p>   
+                                <p>Paid : <span id="DetailPaid" class="Detail-Item"></span></p>   
+                                <p>ID : <span id="Detailid" class="Detail-id"></span></p>   
+                            </div>
+                        </div>
+
+                        <div class="TotalRecord">
+                            <div class="totalRecordBox">
+                                <table class="totalItemtable" id="totalTable">
+                                    <tr>
+                                        <th>Items</th>
+                                        <th>No of Items</th>
+                                        <th>Total Price</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Paid Items</td>
+                                        <td id="noOfPaidItem">0</td>
+                                        <td id="PaidItemPrice">0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Unpaid Items</td>
+                                        <td  id="noOfUnPaidItem">0</td>
+                                        <td id="UnPaidItemPrice">0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>All Items</td>
+                                        <td id="NoOfAllItem">0</td>
+                                        <td id="AllItemPrice">0</td>
+                                    </tr>
+                                </table>
+                                
+                            </div>
+                        </div>
+                </div>  
+        </section>
+        <footer class="footer"><p>
+            © 2022 by Raunak Singh</p> </footer>
+
+        <script src="index.js"></script>
+    </body>
+</html>
