@@ -29,7 +29,7 @@ function addItem() {
 
     const date = new Date()
     // console.log()
-    if(name && type && price && isNumeric(price)){
+    if(name && price && isNumeric(price)){
     
     document.getElementById("NameInput").style.border = "1px solid green"
     document.getElementById("NameInput").style.boxShadow = "none";
